@@ -18,18 +18,25 @@
 *.zip
 *.tar.gz
 *.rar
+target/
 
-#IntelliJ
+# idea ignore
+.idea/
+.idea
+*.ipr
 *.iml
-# Default ignored files
-/shelf/
-/workspace.xml
-# Datasource local storage ignored files
-/../../../../../:\github-repo\iversongzy\spring\.idea/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+*.iws
 
+# temp ignore
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+*.orig
 
 
 
