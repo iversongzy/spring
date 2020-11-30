@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="userService" class="org.lgt.bilibilispring.ioc.UserService">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="userDao" class="org.lgt.bilibilispring.ioc.UserDao"></bean>
+
+    <bean id="userService2" class="org.lgt.bilibilispring.ioc.UserService">
+        <property name="userDao">
+            <bean id="userDao" class="org.lgt.bilibilispring.ioc.UserDao">
+
+            </bean>
+        </property>
+    </bean>
+    <bean id="dependency" class="org.lgt.bilibilispring.ioc.Dependency">
+        <property name="name" value="software platform"></property>
+        <property name="peopleNum" value="1"></property>
+        <property name="employees">
+            <list>
+                <ref bean="employee1"></ref>
+                <ref bean="employee2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="employee1" class="org.lgt.bilibilispring.ioc.Employee">
+        <property name="name" value="liuguotai"></property>
+        <property name="index" value="10243185"></property>
+    </bean>
+    <bean id="employee2" class="org.lgt.bilibilispring.ioc.Employee">
+        <property name="name" value="why"></property>
+        <property name="index" value="00222222"></property>
+    </bean>
+
+    <util:map id="bookMap">
+        <entry key="JJJ" value="liu"></entry>
+    </util:map>
+
+    <bean id="myFactoryBean" class="org.lgt.bilibilispring.ioc.MyFactoryBean" scope="prototype"></bean>
+</beans>
