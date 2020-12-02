@@ -2,9 +2,11 @@ package org.lgt.bilibilispring;
 
 import org.junit.Test;
 import org.lgt.bilibilispring.ioc.*;
+import org.lgt.bilibilispring.ioc.annotation.SpringConfig;
 import org.lgt.bilibilispring.ioc.autowire.Father;
 import org.lgt.bilibilispring.ioc.lifecycle.Controller;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -78,7 +80,20 @@ public class BiliSpringTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:META-INF/bilibili-spring-bean4.xml");
         Father father = applicationContext.getBean("father", Father.class);
         System.out.println(father);
+    }
 
+    @Test
+    public void annotationTest() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:META-INF/bilibili-spring-bean5.xml");
+        org.lgt.bilibilispring.ioc.annotation.UserService userService = applicationContext.getBean("userService", org.lgt.bilibilispring.ioc.annotation.UserService.class);
+        userService.show();
+    }
+
+    @Test
+    public void absAnnotationTest() {
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        UserService userService = context.getBean("userService", UserService.class);
+        userService.add();
     }
 
 
