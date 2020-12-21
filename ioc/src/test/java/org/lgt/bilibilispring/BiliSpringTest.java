@@ -92,8 +92,8 @@ public class BiliSpringTest {
     @Test
     public void absAnnotationTest() {
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
-        UserService userService = context.getBean("userService", UserService.class);
-        userService.add();
+        org.lgt.bilibilispring.ioc.annotation.UserService userService = context.getBean("userService", org.lgt.bilibilispring.ioc.annotation.UserService.class);
+        userService.show();
     }
 
 

@@ -2,8 +2,7 @@ package org.lgt.bilibilispring.ioc.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 /**
  * @Description
@@ -11,18 +10,15 @@ import org.springframework.stereotype.Service;
  * @Date2020/12/1 23:52
  **/
 
-//@Component(value = "userService")
-
-@Service
+@Repository(value = "userService")
 public class UserService {
-    @Value(value = "lgt")
-    private String name;
+
     @Autowired
-    @Qualifier(value = "userDao")
+    @Qualifier(value = "userDaoImpl")
     private UserDao userDao;
 
     public void show() {
-        System.out.println("show method" + name);
+        System.out.println("enter show method.");
         userDao.show();
     }
 }

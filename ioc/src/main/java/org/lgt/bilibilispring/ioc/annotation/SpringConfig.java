@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @Author liuguotai
  * @Date2020/12/2 23:26
  **/
+//使用Configuration注解作为配置类，代替xml配置文件
 @Configuration
 @ComponentScan(basePackages = {"org.lgt.bilibilispring.ioc"})
 public class SpringConfig {
