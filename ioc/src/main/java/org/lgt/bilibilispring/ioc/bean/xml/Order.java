@@ -1,4 +1,4 @@
-package org.lgt.bilibilispring.ioc;
+package org.lgt.bilibilispring.ioc.bean.xml;
 
 /**
  * @Description

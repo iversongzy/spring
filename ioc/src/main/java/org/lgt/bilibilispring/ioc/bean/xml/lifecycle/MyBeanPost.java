@@ -1,4 +1,4 @@
-package org.lgt.bilibilispring.ioc.lifecycle;
+package org.lgt.bilibilispring.ioc.bean.xml.lifecycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

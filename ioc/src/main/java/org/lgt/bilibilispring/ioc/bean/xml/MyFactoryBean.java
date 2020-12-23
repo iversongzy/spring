@@ -1,5 +1,6 @@
-package org.lgt.bilibilispring.ioc;
+package org.lgt.bilibilispring.ioc.bean.xml;
 
+import org.lgt.bilibilispring.ioc.bean.xml.Book;
 import org.springframework.beans.factory.FactoryBean;
 
 /**

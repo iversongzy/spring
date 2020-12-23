@@ -1,4 +1,4 @@
-import org.lgt.bilibilispring.ioc.User;
+import org.lgt.bilibilispring.ioc.bean.xml.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

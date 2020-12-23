@@ -3,8 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="controller" class="org.lgt.bilibilispring.ioc.lifecycle.Controller" init-method="initMethod" destroy-method="destroyMethod">
+    <bean id="controller" class="org.lgt.bilibilispring.ioc.bean.xml.lifecycle.Controller" init-method="initMethod" destroy-method="destroyMethod">
         <property name="domain" value="SDON"></property>
     </bean>
-    <bean id="myBeanPost" class="org.lgt.bilibilispring.ioc.lifecycle.MyBeanPost"></bean>
+    <bean id="myBeanPost" class="org.lgt.bilibilispring.ioc.bean.xml.lifecycle.MyBeanPost"></bean>
 </beans>

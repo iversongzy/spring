@@ -3,20 +3,20 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="user" class="org.lgt.bilibilispring.ioc.User">
+    <bean id="user" class="org.lgt.bilibilispring.ioc.bean.xml.User">
         <property name="book">
 <!--            <null/>-->
             <value><![CDATA[<<Java Script>>]]></value>
         </property>
     </bean>
-    <bean id="book" class="org.lgt.bilibilispring.ioc.Book">
+    <bean id="book" class="org.lgt.bilibilispring.ioc.bean.xml.Book">
         <property name="author" value="liuguotai"></property>
         <property name="price" value="10"></property>
     </bean>
-    <bean id="order" class="org.lgt.bilibilispring.ioc.Order">
+    <bean id="order" class="org.lgt.bilibilispring.ioc.bean.xml.Order">
         <constructor-arg name="name" value="jingdong"></constructor-arg>
         <constructor-arg name="address" value="ZTE"></constructor-arg>
     </bean>
-    <bean id="pbook" class="org.lgt.bilibilispring.ioc.Book" p:author="why" p:price="5">
+    <bean id="pbook" class="org.lgt.bilibilispring.ioc.bean.xml.Book" p:author="why" p:price="5">
     </bean>
 </beans>

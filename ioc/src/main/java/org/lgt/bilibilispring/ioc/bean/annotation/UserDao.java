@@ -1,4 +1,4 @@
-package org.lgt.bilibilispring.ioc.annotation;
+package org.lgt.bilibilispring.ioc.bean.annotation;
 
 /**
  * @Description

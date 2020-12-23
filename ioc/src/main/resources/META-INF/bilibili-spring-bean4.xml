@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--<bean id="father" class="org.lgt.bilibilispring.ioc.autowire.Father" autowire="byName"></bean>-->
-    <bean id="father" class="org.lgt.bilibilispring.ioc.autowire.Father" autowire="byType"></bean>
-    <bean id="son" class="org.lgt.bilibilispring.ioc.autowire.Son"></bean>
+    <!--<bean id="father" class="org.lgt.bilibilispring.ioc.bean.xml.autowire.Father" autowire="byName"></bean>-->
+    <bean id="father" class="org.lgt.bilibilispring.ioc.bean.xml.autowire.Father" autowire="byType"></bean>
+    <bean id="son" class="org.lgt.bilibilispring.ioc.bean.xml.autowire.Son"></bean>
 </beans>

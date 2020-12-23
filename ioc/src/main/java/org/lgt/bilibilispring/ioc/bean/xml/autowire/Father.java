@@ -1,4 +1,4 @@
-package org.lgt.bilibilispring.ioc.autowire;
+package org.lgt.bilibilispring.ioc.bean.xml.autowire;
 
 /**
  * @Description
