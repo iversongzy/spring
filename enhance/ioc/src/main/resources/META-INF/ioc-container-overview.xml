@@ -9,7 +9,7 @@
     </bean>
 
 <!--  primary表示它是主要的  -->
-    <bean id="'superUser" class="org.lgt.spring.ioc.domain.SuperUser" parent="user" primary="true">
+    <bean id="superUser" class="org.lgt.spring.ioc.domain.SuperUser" parent="user" primary="true">
         <property name="address" value="YJ"></property>
     </bean>
 
